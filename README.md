@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./카카오톡_20240323_145512952.png" alt="각산 대리점 로고" width="180"><br/>
+  <img src="./logo.png" alt="각산 대리점 로고" width="180"><br/>
   <b>Gaksan Insurance Agency (각산 대리점)</b>
 </p>
 
