@@ -1,16 +1,33 @@
-## Hi there 👋
+# 🏔️ Gaksan Insurance Agency (각산 대리점)
 
-<!--
-**gaksan-insure/gaksan-insure** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+안녕하세요, 저는 **김대인**입니다.  
+18년째 고객과 함께하는 **보험 전문가**이며,  
+현재 **각산 대리점(Gaksan Insurance Agency)** 을 운영하고 있습니다.  
 
-Here are some ideas to get you started:
+저희 브랜드 **"각산"** 은 경남 사천의 명산인 **각산**처럼  
+든든하고 변치 않는 신뢰를 바탕으로, 고객 인생의 안전한 동반자가 되고자 합니다.  
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## 💡 우리의 핵심 가치
+- ✔️ **신뢰** : 18년간 3,000건 이상의 보험금 청구 경험  
+- ✔️ **전문성** : 간병보험, 운전자보험, 실손보험 등 맞춤형 컨설팅  
+- ✔️ **동행** : 가입 후에도 끝까지 책임지는 사후관리  
+
+---
+
+## 🚀 현재 진행 중인 프로젝트
+- 📊 **보험 정보 블로그 운영** (현재 보완 중, 곧 공개 예정)  
+- 🤖 **AI 마케팅 자동화** (GPT 기반 고객 관리 및 콘텐츠 제작)  
+- 🌍 **지역 특화 브랜딩** (사천·삼천포 중심 맞춤형 서비스)  
+
+---
+
+## 📫 연락하기
+- 이메일 : (준비 중)  
+- 블로그 : (준비 중)  
+- 인스타그램 : (준비 중)  
+
+---
+
+> **"보험은 단순한 계약이 아니라, 고객의 인생을 지켜주는 약속입니다."**
