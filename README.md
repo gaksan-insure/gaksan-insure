@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="./카카오톡_20240323_145512952.png" alt="각산 대리점 로고" width="180"><br/>
+  <b>Gaksan Insurance Agency (각산 대리점)</b>
+</p>
+
 # 🏔️ Gaksan Insurance Agency (각산 대리점)
 
 안녕하세요, 저는 **김대인**입니다.  
