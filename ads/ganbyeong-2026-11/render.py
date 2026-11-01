@@ -1,7 +1,7 @@
 # 간병인보험 세로 숏폼 광고 렌더러 (1080x1920, 30fps)
 # 사용: python3 render.py  (img/s1~s8.png, fonts/, logo.png, music.wav 필요)
 import subprocess, os
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops
 W,H=1080,1920; FPS=30; XF=0.6
 os.makedirs('build',exist_ok=True)
 F_SUB='fonts/nm800.ttf'; F_REG='fonts/nm700.ttf'; F_SANS='fonts/ns500.ttf'
@@ -80,7 +80,9 @@ def endcard():
     bg=(243,237,228); ink=(58,44,34)
     base=Image.new('RGBA',(W,H),bg+(255,))
     logo=Image.open('logo.png').convert('RGBA').resize((300,300),Image.LANCZOS)
-    base.alpha_composite(logo,((W-300)//2,250)); base.save('build/end_bg.png')
+    flat=Image.new('RGB',logo.size,(255,255,255)); flat.paste(logo,mask=logo.split()[3])
+    region=base.crop(((W-300)//2,250,(W-300)//2+300,550)).convert('RGB')
+    base.paste(ImageChops.multiply(region,flat),((W-300)//2,250)); base.save('build/end_bg.png')
     def layer(path,text,y,size,font,fill=ink,spacing=24):
         im=Image.new('RGBA',(W,H),(0,0,0,0)); d=ImageDraw.Draw(im); f=ImageFont.truetype(font,size)
         bb=d.multiline_textbbox((0,0),text,font=f,spacing=spacing,align='center')
