@@ -28,11 +28,12 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--navy);font
 .todo .tag{margin-left:auto;font-size:40px;font-weight:800;padding:10px 22px;border-radius:999px;background:var(--mint);color:var(--navy);opacity:0}
 .chip{display:inline-block;font-size:58px;font-weight:800;padding:22px 46px;border-radius:999px;margin:14px;border:5px solid var(--mint);color:var(--mint)}
 .cta{display:inline-block;margin-top:70px;font-size:76px;font-weight:900;color:var(--navy);background:linear-gradient(90deg,var(--mint),#6FF0FF);padding:44px 80px;border-radius:999px;box-shadow:0 0 0 var(--glow,0px) rgba(46,230,176,.35)}
-.logo{width:300px;height:300px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:60px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
-.logo img{width:300px;height:300px}
+.logo{width:260px;height:260px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:50px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.logo img{width:260px;height:260px}
 #bar{position:absolute;top:60px;left:60px;right:60px;height:10px;border-radius:5px;background:rgba(255,255,255,.15);overflow:hidden}
 #bar i{display:block;height:100%;width:0;background:var(--mint)}
 #flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+.badge{display:inline-block;margin:26px 0 14px;font-size:50px;font-weight:800;color:var(--gold);padding:14px 40px;border:4px solid var(--gold);border-radius:999px;background:rgba(255,201,74,.10)}
 .brandfoot{position:absolute;bottom:110px;left:0;right:0;text-align:center;font-size:40px;font-weight:700;color:var(--dim)}
 </style>
 </head>
@@ -96,9 +97,10 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--navy);font
   <div class="scene" id="s6" data-s="26" data-e="32.5">
     <div class="logo a" data-s="26.1" data-fx="pop"><img src="assets/logo.png" alt=""></div>
     <div class="h3 a" data-s="26.5">20년 현장에서 검증한</div>
-    <div class="h2 a" data-s="26.9" style="margin-top:10px"><span class="hl" style="--hlc:rgba(46,230,176,.35);--hx:var(--hx2)">AI 업무 자동화</span></div>
-    <div class="h3 a" data-s="27.3" style="margin-top:10px">내 일에 맞게 1:1로</div>
-    <div class="cta a" data-s="28.0" data-fx="pop">1:1 컨설팅 신청하기 →</div>
+    <div class="badge a" data-s="26.8" data-fx="pop">보험금 청구 5,000건+</div>
+    <div class="h2 a" data-s="27.1" style="margin-top:10px"><span class="hl" style="--hlc:rgba(46,230,176,.35);--hx:var(--hx2)">AI 업무 자동화</span></div>
+    <div class="h3 a" data-s="27.5" style="margin-top:10px">내 일에 맞게 1:1로</div>
+    <div class="cta a" data-s="28.1" data-fx="pop">1:1 컨설팅 신청하기 →</div>
     <div class="small dim a" data-s="28.6" style="margin-top:50px">프로필 링크 · DM으로 신청</div>
   </div>
   <div class="brandfoot a" id="foot" data-s="26.3">각산 보험대리점 · Gaksan Insurance Agency</div>
@@ -170,7 +172,7 @@ function render(t){
   if(t>5.6&&t<8){document.querySelectorAll('#s2 .todo').forEach((n,i)=>{n.style.transform+=` translateX(${Math.sin(t*38+i)*6}px)`});}
   // 하이라이트 밑줄
   document.documentElement.style.setProperty('--hx1',clamp((t-1.4)/0.4));
-  document.documentElement.style.setProperty('--hx2',clamp((t-27.2)/0.5));
+  document.documentElement.style.setProperty('--hx2',clamp((t-27.4)/0.5));
   // CTA 펄스
   const cta=document.querySelector('.cta'); if(t>28.5){const pz=(Math.sin((t-28.5)*Math.PI*2)+1)/2; cta.style.transform=`scale(${1+0.04*pz})`; cta.style.setProperty('--glow',(10+30*pz)+'px');}
   // 8초 전환 플래시
