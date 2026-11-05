@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>각산 AI 자동화 1:1 컨설팅 - 숏폼 광고</title>
+<style>
+@font-face{font-family:P;font-weight:500;src:url(assets/fonts/Pretendard-Medium.woff2)}
+@font-face{font-family:P;font-weight:700;src:url(assets/fonts/Pretendard-Bold.woff2)}
+@font-face{font-family:P;font-weight:800;src:url(assets/fonts/Pretendard-ExtraBold.woff2)}
+@font-face{font-family:P;font-weight:900;src:url(assets/fonts/Pretendard-Black.woff2)}
+:root{--navy:#0A1430;--mint:#2EE6B0;--gold:#FFC94A;--red:#FF5A5F;--white:#F6F8FF;--dim:#8C98BF}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--navy);font-family:P,sans-serif;color:var(--white);letter-spacing:-0.03em;word-break:keep-all}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden}
+#bg{position:absolute;inset:0}
+.scene{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;opacity:0}
+.a{will-change:transform,opacity;opacity:0}
+.mint{color:var(--mint)} .gold{color:var(--gold)} .red{color:var(--red)} .dim{color:var(--dim)}
+.h1{font-size:150px;font-weight:900;line-height:1.12}
+.h2{font-size:110px;font-weight:900;line-height:1.15}
+.h3{font-size:72px;font-weight:800;line-height:1.25}
+.small{font-size:52px;font-weight:700}
+.hl{position:relative;display:inline-block;padding:0 18px}
+.hl::before{content:"";position:absolute;left:0;right:0;bottom:12px;height:42%;background:var(--hlc,rgba(255,90,95,.35));z-index:-1;transform-origin:left;transform:scaleX(var(--hx,1))}
+.clock{font-family:P;font-weight:900;font-size:120px;color:var(--red);letter-spacing:.02em;padding:18px 54px;border:6px solid var(--red);border-radius:40px;margin-bottom:90px}
+.todo{width:860px;display:flex;align-items:center;gap:30px;background:#16224A;border-radius:34px;padding:34px 44px;margin:14px 0;font-size:60px;font-weight:800;text-align:left;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.box{flex:none;width:70px;height:70px;border-radius:18px;border:7px solid var(--dim);display:flex;align-items:center;justify-content:center;font-size:52px;font-weight:900;color:var(--navy)}
+.todo .tag{margin-left:auto;font-size:40px;font-weight:800;padding:10px 22px;border-radius:999px;background:var(--mint);color:var(--navy);opacity:0}
+.chip{display:inline-block;font-size:58px;font-weight:800;padding:22px 46px;border-radius:999px;margin:14px;border:5px solid var(--mint);color:var(--mint)}
+.cta{display:inline-block;margin-top:70px;font-size:76px;font-weight:900;color:var(--navy);background:linear-gradient(90deg,var(--mint),#6FF0FF);padding:44px 80px;border-radius:999px;box-shadow:0 0 0 var(--glow,0px) rgba(46,230,176,.35)}
+.logo{width:260px;height:260px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:50px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.logo img{width:260px;height:260px}
+#bar{position:absolute;top:60px;left:60px;right:60px;height:10px;border-radius:5px;background:rgba(255,255,255,.15);overflow:hidden}
+#bar i{display:block;height:100%;width:0;background:var(--mint)}
+#flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+.badge{display:inline-block;margin:26px 0 14px;font-size:50px;font-weight:800;color:var(--gold);padding:14px 40px;border:4px solid var(--gold);border-radius:999px;background:rgba(255,201,74,.10)}
+.brandfoot{position:absolute;bottom:110px;left:0;right:0;text-align:center;font-size:40px;font-weight:700;color:var(--dim)}
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="bg" width="1080" height="1920"></canvas>
+  <div id="bar"><i></i></div>
+
+  <!-- S1 0-4s : 문제 제기 -->
+  <div class="scene" id="s1" data-s="0" data-e="4">
+    <div class="clock a" data-s="0.05" data-fx="pop">PM 11:47</div>
+    <div class="h1 a" data-s="0.45">아직도</div>
+    <div class="h1 a" data-s="0.8">퇴근 후에</div>
+    <div class="h1 a" data-s="1.15"><span class="hl red" style="--hx:var(--hx1)">보장분석</span></div>
+    <div class="h2 a" data-s="1.5">하고 계세요?</div>
+  </div>
+
+  <!-- S2 4-8s : 반복업무 더미 -->
+  <div class="scene" id="s2" data-s="4" data-e="8">
+    <div class="h3 dim a" data-s="4.05" style="margin-bottom:40px">오늘도 쌓인 일</div>
+    <div class="todo a" data-s="4.25" data-fx="drop"><span class="box"></span>고객 안부·만기 문자</div>
+    <div class="todo a" data-s="4.55" data-fx="drop"><span class="box"></span>증권 분석·보장 비교</div>
+    <div class="todo a" data-s="4.85" data-fx="drop"><span class="box"></span>상담 자료 준비</div>
+    <div class="todo a" data-s="5.15" data-fx="drop"><span class="box"></span>블로그·SNS 홍보 글</div>
+    <div class="h2 a" data-s="5.9" style="margin-top:70px">하루가 <span class="red">모자랐습니다</span></div>
+  </div>
+
+  <!-- S3 8-12s : 전환 / 신뢰 -->
+  <div class="scene" id="s3" data-s="8" data-e="12">
+    <div class="small gold a" data-s="8.1">현장 20년차 보험대리점 대표</div>
+    <div class="h1 a" data-s="8.5" data-fx="pop" style="margin-top:50px"><span class="mint">4년</span> 동안</div>
+    <div class="h1 a" data-s="9.0" data-fx="pop">AI에게</div>
+    <div class="h1 a" data-s="9.5" data-fx="pop">일을 맡겼습니다</div>
+  </div>
+
+  <!-- S4 12-22s : 자동화 결과 -->
+  <div class="scene" id="s4" data-s="12" data-e="22">
+    <div class="h2 a" data-s="12.1" style="margin-bottom:50px">그랬더니,</div>
+    <div class="todo a done" data-s="12.6" data-c="13.4"><span class="box"></span>고객 안부·만기 문자<span class="tag">AI 자동</span></div>
+    <div class="todo a done" data-s="13.0" data-c="14.6"><span class="box"></span>증권 분석·보장 비교<span class="tag">AI 자동</span></div>
+    <div class="todo a done" data-s="13.4" data-c="15.8"><span class="box"></span>상담 자료 준비<span class="tag">AI 자동</span></div>
+    <div class="todo a done" data-s="13.8" data-c="17.0"><span class="box"></span>블로그·SNS 홍보 글<span class="tag">AI 자동</span></div>
+    <div class="h3 a" data-s="18.2" style="margin-top:80px">반복 업무는 <span class="mint">AI가</span>,</div>
+    <div class="h3 a" data-s="18.9">저는 <span class="gold">고객 곁에</span></div>
+  </div>
+
+  <!-- S5 22-26s : 쉬운 시작 -->
+  <div class="scene" id="s5" data-s="22" data-e="26">
+    <div class="h2 a" data-s="22.1">코딩? <span class="dim">몰라도 됩니다</span></div>
+    <div class="h2 a" data-s="22.7" style="margin-top:20px"><span class="mint">스마트폰 하나</span>면</div>
+    <div class="h2 a" data-s="23.1">시작합니다</div>
+    <div style="margin-top:80px;width:960px">
+      <span class="chip a" data-s="23.7" data-fx="pop">보험설계사</span>
+      <span class="chip a" data-s="23.9" data-fx="pop">소상공인</span>
+      <span class="chip a" data-s="24.1" data-fx="pop">1인 사장님</span>
+      <span class="chip a" data-s="24.3" data-fx="pop">AI 왕초보</span>
+    </div>
+  </div>
+
+  <!-- S6 26-32s : CTA -->
+  <div class="scene" id="s6" data-s="26" data-e="32.5">
+    <div class="logo a" data-s="26.1" data-fx="pop"><img src="assets/logo.png" alt=""></div>
+    <div class="h3 a" data-s="26.5">20년 현장에서 검증한</div>
+    <div class="badge a" data-s="26.8" data-fx="pop">보험금 청구 5,000건+</div>
+    <div class="h2 a" data-s="27.1" style="margin-top:10px"><span class="hl" style="--hlc:rgba(46,230,176,.35);--hx:var(--hx2)">AI 업무 자동화</span></div>
+    <div class="h3 a" data-s="27.5" style="margin-top:10px">내 일에 맞게 1:1로</div>
+    <div class="cta a" data-s="28.1" data-fx="pop">1:1 컨설팅 신청하기 →</div>
+    <div class="small dim a" data-s="28.6" style="margin-top:50px">프로필 링크 · DM으로 신청</div>
+  </div>
+  <div class="brandfoot a" id="foot" data-s="26.3">각산 보험대리점 · Gaksan Insurance Agency</div>
+  <div id="flash"></div>
+</div>
+
+<script>
+const DUR = 32;
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const easeOut=x=>1-Math.pow(1-x,3);
+const easeBack=x=>{const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const scenes=[...document.querySelectorAll('.scene')];
+const items=[...document.querySelectorAll('.a')];
+const bg=document.getElementById('bg'),ctx=bg.getContext('2d');
+// 결정적(deterministic) 파티클: 렌더 시점과 무관하게 같은 프레임
+const P=[...Array(70)].map((_,i)=>{const r=Math.sin(i*12.9898)*43758.5453;const f=r-Math.floor(r);const r2=Math.sin(i*78.233)*12345.678;const g=r2-Math.floor(r2);return{x:f*1080,y:g*1920,s:2+((i*7)%5),v:20+((i*13)%40)}});
+
+function drawBG(t){
+  const calm = t<8 ? 0 : clamp((t-8)/0.6);           // 8초 전환 전: 어둡고 붉은 톤 / 이후: 밝은 민트 톤
+  const g=ctx.createLinearGradient(0,0,0,1920);
+  const top = calm ? `rgb(${10+8*calm},${20+30*calm},${48+40*calm})` : '#140E22';
+  g.addColorStop(0,t<8?'#1A0F24':top); g.addColorStop(1,t<8?'#0A0A18':'#081026');
+  ctx.fillStyle=g; ctx.fillRect(0,0,1080,1920);
+  // 은은한 원형 글로우
+  const gx=540+Math.sin(t*0.6)*180, gy=760+Math.cos(t*0.45)*240;
+  const rg=ctx.createRadialGradient(gx,gy,0,gx,gy,900);
+  rg.addColorStop(0,t<8?'rgba(255,90,95,0.18)':'rgba(46,230,176,0.20)'); rg.addColorStop(1,'rgba(0,0,0,0)');
+  ctx.fillStyle=rg; ctx.fillRect(0,0,1080,1920);
+  // 그리드 (AI/데이터 느낌, 전환 후)
+  if(t>=8){ctx.strokeStyle=`rgba(46,230,176,${0.06*calm})`;ctx.lineWidth=2;const off=(t*40)%120;
+    for(let y=-120+off;y<1920;y+=120){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(1080,y);ctx.stroke();}
+    for(let x=0;x<1080;x+=120){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,1920);ctx.stroke();}}
+  // 파티클
+  for(const p of P){const y=((p.y - t*p.v)%1920+1920)%1920;ctx.fillStyle=t<8?'rgba(255,150,150,0.25)':'rgba(120,255,220,0.35)';ctx.beginPath();ctx.arc(p.x,y,p.s,0,7);ctx.fill();}
+}
+
+function render(t){
+  drawBG(t);
+  document.querySelector('#bar i').style.width=(clamp(t/DUR)*100)+'%';
+  for(const sc of scenes){
+    const s=+sc.dataset.s,e=+sc.dataset.e;
+    let o=clamp((t-s)/0.15)*clamp((e-t)/0.25);
+    sc.style.opacity=o;
+    let sc_out=1+0.04*clamp(1-(e-t)/0.25);
+    sc.style.transform=`scale(${sc_out})`;
+    sc.style.visibility=o>0?'visible':'hidden';
+  }
+  for(const el of items){
+    const s=+el.dataset.s, fx=el.dataset.fx||'up';
+    const p=clamp((t-s)/0.45);
+    let tr='';
+    if(fx==='up') tr=`translateY(${(1-easeOut(p))*80}px)`;
+    if(fx==='pop') tr=`scale(${0.4+0.6*easeBack(p)})`;
+    if(fx==='drop') tr=`translateY(${(1-easeBack(p))*-140}px) rotate(${(1-p)*-4}deg)`;
+    el.style.opacity=clamp(p*1.6);
+    el.style.transform=tr;
+    // 체크 완료 애니메이션
+    if(el.classList.contains('done')){
+      const c=+el.dataset.c, q=clamp((t-c)/0.3);
+      const box=el.querySelector('.box'), tag=el.querySelector('.tag');
+      box.style.background=q>0?`rgba(46,230,176,${q})`:'transparent';
+      box.style.borderColor=q>0?'#2EE6B0':'#8C98BF';
+      box.textContent=q>0.3?'✓':'';
+      tag.style.opacity=q; tag.style.transform=`scale(${0.6+0.4*easeBack(q)})`;
+      el.style.background=q>0?`rgba(46,230,176,${0.10+0.06*q})`:'#16224A';
+    }
+  }
+  // S2 흔들림(압박감)
+  if(t>5.6&&t<8){document.querySelectorAll('#s2 .todo').forEach((n,i)=>{n.style.transform+=` translateX(${Math.sin(t*38+i)*6}px)`});}
+  // 하이라이트 밑줄
+  document.documentElement.style.setProperty('--hx1',clamp((t-1.4)/0.4));
+  document.documentElement.style.setProperty('--hx2',clamp((t-27.4)/0.5));
+  // CTA 펄스
+  const cta=document.querySelector('.cta'); if(t>28.5){const pz=(Math.sin((t-28.5)*Math.PI*2)+1)/2; cta.style.transform=`scale(${1+0.04*pz})`; cta.style.setProperty('--glow',(10+30*pz)+'px');}
+  // 8초 전환 플래시
+  document.getElementById('flash').style.opacity= t>=8&&t<8.35 ? (1-(t-8)/0.35)*0.85 : 0;
+  // 시계 깜빡임
+  const ck=document.querySelector('.clock'); if(t<4) ck.textContent = (Math.floor(t*2)%2? 'PM 11:47':'PM 11:47').replace(':', (Math.floor(t*2)%2?' ':':'));
+}
+window.render=render; window.DUR=DUR;
+// 미리보기(브라우저로 직접 열었을 때)
+if(!window.__RENDER__){let st=performance.now();const loop=()=>{const t=((performance.now()-st)/1000)%DUR;render(t);requestAnimationFrame(loop)};document.fonts.ready.then(loop);}
+</script>
+</body>
+</html>
